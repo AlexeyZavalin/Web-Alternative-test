@@ -1,0 +1,19 @@
+{
+  "name": "web-alt-test",
+  "authors": [
+    "Alexey Zavalin <lehazavalin95@gmail.com>"
+  ],
+  "description": "Тестовое задание на должность верстальщика",
+  "main": "gulpfile.js",
+  "keywords": [
+    "тест",
+    "верстальщик",
+    "frontend"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "normalize-css": "normalize.css#^4.2.0"
+  }
+}

@@ -1,0 +1,254 @@
+.header__top {	
+	background: #fff;
+	box-shadow: 0px 2px 2px 0 #dddddd;
+	.menu_button {
+		display: none;
+		svg {
+			width: 30px;
+			height: 30px;
+			fill: #34af23;
+		}
+	}
+	.header__items {
+		flex-wrap: wrap;
+		min-height: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		.top__acc {
+			text-align: center;
+			a{
+				color: #424242;
+				font-family: 'Open Sans';
+				text-align: center;
+			}
+		}
+		.top__location {
+			display: flex;
+			align-items: center;
+			align-content: center;
+			.location__ico {
+				svg {
+					width: 15px;
+					height: 15px;
+					fill: #bdbdbd;
+				}
+			}
+			.location__text {
+				margin: 0;
+				padding: 0;
+				color:#757575;
+				font-size: 12px;
+				&:hover {
+					border-bottom: 1px dashed #757575;
+					margin-bottom: -1px;
+					cursor: default;
+				}
+			}
+		}
+		.social__list {
+			margin-bottom: 0;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			.social__link {
+				width: 25px;
+				height: 25px;
+				display: block;
+				position: relative;
+				border: 1px solid #bdbdbd;
+				border-radius: 50%;
+				margin-right: 5px;
+				transition: all .3s;
+				&:last-child {
+					margin-of-type: 0;
+				}
+				&:hover {
+					border-color: #00b035;
+					svg {
+						fill: #00b035;
+					}
+				}
+				svg {
+					transition: all .3s;
+					fill: #bdbdbd;
+					width: 13px;
+					height: 13px;
+					position: absolute;
+					top:0; bottom:0; left:0; right:0; margin: auto;
+				}
+			}			
+		}
+	}
+	.top__navigation {
+		.nav__list {
+			margin-bottom: 0;
+			display: flex;
+			flex-wrap: wrap;
+			.nav__item {
+				padding: 0 25px;
+				flex-grow: 1;
+				text-align: center;
+			}
+			.nav__link {
+				color: #424242;
+				text-transform: uppercase;
+				font-size: 11px;
+				font-family: 'Roboto';
+				transition: all .3s;
+				text-align: center;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.header__bottom {
+	.items {
+		background: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		.search__form {
+			border: 1px solid #bdbdbd;
+			border-radius: 5px;
+			form {			
+				select {
+					border: none;
+					background: #bdbdbd;
+					color: #fff;
+					font-size: 12px;
+					font-family: 'Open Sans';
+					margin: 0;
+					height: inherit;
+					outline: none;
+					padding: 7px;
+					option {
+						background: #fff;
+						color: #000;
+						width: 200px;
+					}
+				}
+				input[type="text"] {
+					border: none;
+					margin: 0;
+					outline: none;
+					padding: 5px;
+				}
+				input[type="submit"] {
+					border: none;
+					margin: 0;
+					outline: none;
+					background: #bdbdbd;
+					display: inline-block;
+					height: 100%;
+					color: #fff;
+					padding: 0;
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+		.brands__button {			
+			.button__link {
+				display: block;
+				padding: 10px 20px;
+				border: 1px solid #bdbdbd;
+				text-transform: uppercase;
+				border-radius: 5px;
+				color: #616161;
+				transition: all .4s;
+				&:hover {
+					background: #616161;
+					color: #fff;
+				}
+			}
+		}
+		.phone {			
+			.phone__ico {
+				display: inline-block;
+				svg {
+					fill: #bdbdbd;
+					width: 17px;
+					height: 17px;
+				}
+			}
+			a {
+				color: #757575;
+			}
+		}
+		.basket {
+			display: flex;
+			align-content: center;
+			align-items: center;
+		}
+		.basket__ico {
+			margin-right: 17px;
+			width: 50px;
+			height: 50px;
+			position: relative;
+			border-radius: 50%;
+			background: #ff4081;
+			transition: all .4s;
+			&:hover {
+				cursor: pointer;
+				background: lighten(#ff4081, 5%);
+				.amount {
+					background: lighten(#00b035, 5%);
+				}
+			}
+			svg {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				fill: #fff;
+			}
+		}
+		.amount {
+			transition: all .4s;
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: #00b035;
+			color: #fff;
+			text-align: center;
+			line-height: 2;
+			top: -8px;
+			right: -8px;
+			font-size: 12px;
+			font-family: 'Open Sans', sans;
+		}
+		.basket__text {
+			text-align: center;
+			.number {
+				padding: 0;
+				margin: 0;
+				font-family: 'Open Sans';
+				font-weight: bold;
+			}
+			.enter_basket {
+				padding: 0;
+				margin: 0;
+				.enter__basket_link {
+					font-size: 11px;
+					font-family: 'Open Sans';
+					color: #757575;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
