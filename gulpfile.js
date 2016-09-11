@@ -5,7 +5,11 @@ less = require('gulp-less'),
 path = require('path'),
 livereload = require('gulp-livereload'),
 connect = require('gulp-connect'),
-wiredep = require('wiredep').stream;
+wiredep = require('wiredep').stream,
+useref = require('gulp-useref'),
+gulpif = require('gulp-if'),
+uglify = require('gulp-uglify'),
+minifyCss = require('gulp-clean-css');;
  
 gulp.task('bower', function () {
   gulp.src('app/index.html')
@@ -25,7 +29,11 @@ gulp.task('connect', function () {
 
 gulp.task('html', function () {
 	gulp.src('app/*.html')	
-	.pipe(connect.reload());
+	.pipe(connect.reload())
+	.pipe(useref())
+	.pipe(gulpif('js/*.js', uglify()))
+	.pipe(gulpif('css/*.css', minifyCss()))
+	.pipe(gulp.dest('dist'));
 });
 
 gulp.task('less', function () {
