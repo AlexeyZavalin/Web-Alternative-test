@@ -26,6 +26,10 @@ ul {
   display: block;
   min-height: 256px;
 }
+.wrapper .content {
+  position: relative;
+  min-height: 100%;
+}
 .footer {
   min-height: 256px;
   margin-top: -256px;

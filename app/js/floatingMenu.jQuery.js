@@ -11,7 +11,7 @@
 			widthThs = ths.width(),
 			distanceLeft = ths.offset().left;
 			ths.wrapInner('<div class="clinged">')
-					.prepend('<div class="placeholder">');
+			.prepend('<div class="placeholder">');
 			function clingInit() {
 				$('.clinged').css({
 					'position': 'fixed',
