@@ -233,7 +233,7 @@
   line-height: 2;
   font-weight: normal;
   text-transform: uppercase;
-  color: #212121;
+  color: #000;
 }
 .brands .brands__lists .list .list__items .list__item:hover {
   text-decoration: underline;
@@ -257,7 +257,7 @@
   }
   .top .button_catalog {
     flex-grow: 10;
-    flex-basis: 500px;
+    flex-basis: 700px;
   }
   .top .button_catalog .catalog .catalog__item .catalog__sub {
     position: relative;
