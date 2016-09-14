@@ -1,5 +1,5 @@
-@import "http://webfonts.ru/import/roboto.css";
-@import "http://webfonts.ru/import/opensans.css";
+@import "../fonts/opensans.css";
+@import "../fonts/roboto.css";
 html {
   height: 100%;
   width: 100%;
@@ -25,10 +25,6 @@ ul {
   content: "";
   display: block;
   min-height: 256px;
-}
-.wrapper .content {
-  position: relative;
-  min-height: 100%;
 }
 .footer {
   min-height: 256px;

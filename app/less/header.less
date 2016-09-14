@@ -1,13 +1,14 @@
+@import "colors.less";
 .header__top {	
 	background: #fff;
-	box-shadow: 0px 2px 2px 0 #dddddd;
+	box-shadow: 0px 2px 2px 0 @dark-gray;
 	margin-bottom: 2px;
 	.menu_button {
 		display: none;
 		svg {
 			width: 30px;
 			height: 30px;
-			fill: #34af23;
+			fill: @green;
 		}
 	}
 	.header__items {
@@ -20,7 +21,7 @@
 		.top__acc {
 			text-align: center;
 			a{
-				color: #424242;
+				color: @dark-gray;
 				font-family: 'Open Sans';
 				text-align: center;
 			}
@@ -33,16 +34,16 @@
 				svg {
 					width: 15px;
 					height: 15px;
-					fill: #bdbdbd;
+					fill: @light-gray;
 				}
 			}
 			.location__text {
 				margin: 0;
 				padding: 0;
-				color:#757575;
+				color: @bread-link;
 				font-size: 12px;
 				&:hover {
-					border-bottom: 1px dashed #757575;
+					border-bottom: 1px dashed @bread-link;
 					margin-bottom: -1px;
 					cursor: default;
 				}
@@ -58,7 +59,7 @@
 				height: 25px;
 				display: block;
 				position: relative;
-				border: 1px solid #bdbdbd;
+				border: 1px solid @light-gray;
 				border-radius: 50%;
 				margin-right: 5px;
 				transition: all .3s;
@@ -66,9 +67,9 @@
 					margin-of-type: 0;
 				}
 				&:hover {
-					border-color: #00b035;
+					border-color: @green;
 					svg {
-						fill: #00b035;
+						fill: @green;
 					}
 				}
 				svg {
@@ -116,8 +117,11 @@
 		align-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+		> div {
+			margin: 0 10px;
+		}
 		.search__form {
-			border: 1px solid #bdbdbd;
+			border: 1px solid @light-gray;
 			border-radius: 5px;
 			flex-grow: 1;
 			margin: 0 15px;
@@ -125,9 +129,10 @@
 			form {
 				display: flex;
 				justify-content: space-between;
+				flex-wrap: wrap;
 				select {
 					border: none;
-					background: #bdbdbd;
+					background: @light-gray;
 					color: #fff;
 					font-size: 12px;
 					font-family: 'Open Sans';
@@ -141,7 +146,7 @@
 						background: #fff;
 						color: #000;
 						width: 200px;
-						border-bottom: 1px solid #bdbdbd;
+						border-bottom: 1px solid @light-gray;
 					}
 				}
 				input[type="text"] {
@@ -155,7 +160,7 @@
 					border: none;
 					margin: 0;
 					outline: none;
-					background: #bdbdbd;
+					background: @light-gray;
 					display: inline-block;
 					height: 100%;
 					color: #fff;
@@ -169,7 +174,7 @@
 			.button__link {
 				display: block;
 				padding: 5px 20px;
-				border: 1px solid #bdbdbd;
+				border: 1px solid @light-gray;
 				text-transform: uppercase;
 				border-radius: 5px;
 				color: #616161;
@@ -184,13 +189,13 @@
 			.phone__ico {
 				display: inline-block;
 				svg {
-					fill: #bdbdbd;
+					fill: @light-gray;
 					width: 17px;
 					height: 17px;
 				}
 			}
 			a {
-				color: #757575;
+				color: @bread-link;
 			}
 		}
 		.basket {
@@ -204,13 +209,13 @@
 			height: 50px;
 			position: relative;
 			border-radius: 50%;
-			background: #ff4081;
+			background: @pink;
 			transition: all .4s;
 			&:hover {
 				cursor: pointer;
-				background: lighten(#ff4081, 5%);
+				background: lighten(@pink, 5%);
 				.amount {
-					background: lighten(#00b035, 5%);
+					background: lighten(@green, 5%);
 				}
 			}
 			svg {
@@ -231,7 +236,7 @@
 			width: 25px;
 			height: 25px;
 			border-radius: 50%;
-			background: #00b035;
+			background: @green;
 			color: #fff;
 			text-align: center;
 			line-height: 2;
@@ -254,7 +259,7 @@
 				.enter__basket_link {
 					font-size: 11px;
 					font-family: 'Open Sans';
-					color: #757575;
+					color: @bread-link;
 					&:hover {
 						text-decoration: underline;
 					}
@@ -273,6 +278,27 @@
 			display: none;
 		}
 	}		
+	.header__bottom {
+		.items {
+			> div {
+				margin-bottom: 10px;
+			}
+			.search__form {
+				form {
+					select {
+						flex-grow: 1;
+						flex-basis: 600px;
+					}
+					input[type="text"] {
+						flex-shrink: 2;
+					}
+					input[type="submit"] {
+						flex-grow: 1;
+					}
+				}				
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 700px) {
